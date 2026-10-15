@@ -26,7 +26,7 @@ const   HeatMapProfile=()=>{
                     console.error("User Id not found    in  local storage");
                     return;
                 }
-                const   response=await  fetch(`http://localhost:3002/activity/${userId}`);
+                const   response=await  fetch(`http://13.53.40.184:3002/activity/${userId}`);
                 if(!response.ok){
                     throw   new Error("Failed to fecth activity");
                 }

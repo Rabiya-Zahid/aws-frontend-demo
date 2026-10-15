@@ -12,7 +12,7 @@ useEffect(()=>{
    
     const   fetchRepositories=async()=>{
         try{
-        const   response=await  fetch(`http://localhost:3002/repo/user/${userId}`);
+        const   response=await  fetch(`http://13.53.40.184:3002/repo/user/${userId}`);
         const   data=await  response.json();
         setRepositories(data.repositories);
         }
@@ -22,7 +22,7 @@ useEffect(()=>{
     };
     const   fetchSuggestedRepositories=async()=>{
         try{
-            const   response=await  fetch(`http://localhost:3002/repo/all`);
+            const   response=await  fetch(`http://13.53.40.184:3002/repo/all`);
             const   data=await response.json()  ;
             setSuggestedRepositories(data)  ; 
            
@@ -52,7 +52,7 @@ console.log("searchResults:", searchResults);
         const   userId=localStorage.getItem("userId");
         try{
             const   response=await  fetch(
-                 `http://localhost:3002/repo/star/${userId}/${repoId}`,
+                 `http://13.53.40.184:3002/repo/star/${userId}/${repoId}`,
             {
                 method: "POST"
             }
